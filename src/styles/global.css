@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-text-primary;
+  font-size: 14px;
+  @apply bg-background-blue;
+}
+
+p {
+  @apply mb-3;
+}
+
+.lightbox-media {
+}
+
+.lightbox-caption {
+  @apply my-5;
+}
+
+.button-group > div:first-child {
+  display: none;
+}
+
+.lsbox {
+  background: transparent !important;
+}
+
+audio::-webkit-media-controls-panel {
+  @apply bg-background-blue;
+}
+
+.lightbox .right,
+.lightbox .left {
+  position: absolute;
+}
+
+.lightbox .right {
+  right: 0;
+}
+
+.lightbox .right .icon-button img,
+.lightbox .left .icon-button img {
+  width: 2em;
+  height: 2em;
+}

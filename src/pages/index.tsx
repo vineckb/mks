@@ -1,14 +1,32 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
+import { PageHeader } from "../components/PageHeader";
+import { AboutSection } from "../sections/About";
+import { SoundCarSection } from "../sections/SoundCar";
+import { RecordingStudioSection } from "../sections/RecordingStudio";
+import { RadioIndoorSection } from "../sections/RadioIndoor";
+import { Analytics } from "@vercel/analytics/react";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="container mx-auto max-w-screen-lg bg-red-700 px-5">
-      <p className="text-white py-5">Hello World!</p>
-    </div>
+    <>
+      <AboutSection />
+      <SoundCarSection />
+      <RecordingStudioSection />
+      <RadioIndoorSection />
+      <PageHeader />
+      <Analytics />
+    </>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="pt-br" />
+    <title>
+      Carro de Som, Estúdio de gravação & Rádio Indoor - MKS Audio Marketing
+    </title>
+  </>
+);
