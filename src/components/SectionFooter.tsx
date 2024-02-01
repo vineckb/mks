@@ -8,7 +8,7 @@ export interface SectionFooterProps {
 
 export function SectionFooter({ text, whatsAppMessage }: SectionFooterProps) {
   return (
-    <div className="container max-w-4xl mx-auto mb-10 md:mb-0 p-6 bg-dark-blue text-white flex items-center gap-5 justify-between">
+    <div className="container max-w-4xl mx-auto p-6 bg-dark-blue text-white flex items-center gap-5 justify-between">
       <h4 className="text-center flex-1 text-lg">{text}</h4>
       <WhatsAppButton message={whatsAppMessage} />
     </div>
