@@ -28,5 +28,21 @@ export const Head: HeadFC = () => (
     <title>
       Carro de Som, Estúdio de gravação & Rádio Indoor - MKS Audio Marketing
     </title>
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_MANAGER_ID}`}
+    ></script>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "${process.env.GTAG_MANAGER_ID}");
+        `,
+      }}
+    />
   </>
 );
